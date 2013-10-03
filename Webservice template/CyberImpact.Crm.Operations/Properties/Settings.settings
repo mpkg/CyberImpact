@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="CrmUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://cyberimpact.crm.vendere.ca/XRMServices/2011/Organization.svc</Value>
+      <Value Profile="(Default)">http://crm/CyberImpactFR/XRMServices/2011/Organization.svc</Value>
     </Setting>
     <Setting Name="UseWindowsAuthentication" Type="System.Boolean" Scope="Application">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="UserName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">TODO</Value>
+      <Value Profile="(Default)">Dev\administrator</Value>
     </Setting>
     <Setting Name="UserPassword" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">TODO</Value>
+      <Value Profile="(Default)">admin@1234</Value>
     </Setting>
   </Settings>
 </SettingsFile>

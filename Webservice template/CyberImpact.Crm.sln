@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberImpact.Crm.WebServices
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberImpact.Crm.Operations", "CyberImpact.Crm.Operations\CyberImpact.Crm.Operations.csproj", "{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{CF761069-9B51-44BD-8860-673F89205D1E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4690C143-0A35-467C-8D73-263987908943} = {4690C143-0A35-467C-8D73-263987908943}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +40,16 @@ Global
 		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Debug|x86.ActiveCfg = Debug|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Debug|x86.Build.0 = Debug|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Release|Any CPU.ActiveCfg = Release|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Release|Mixed Platforms.Build.0 = Release|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Release|x86.ActiveCfg = Release|x86
+		{CF761069-9B51-44BD-8860-673F89205D1E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

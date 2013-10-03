@@ -124,6 +124,7 @@ namespace CyberImpact.Crm.Operations
 
     public class Customer
     {
+        public DateTime dateGabarit { get; set; }
         public int noDuClient { get; set; }
         public string nomDuCompte { get; set; }
         public string telephone { get; set; }
@@ -138,7 +139,7 @@ namespace CyberImpact.Crm.Operations
         public bool importationCompletee { get; set; }
         public DateTime dateImportation { get; set; }
         public bool gabaritCree { get; set; }
-        public DateTime envoiComplete { get; set; }
+        public bool envoiComplete { get; set; }
         public DateTime dateEnvoi { get; set; }
         public DateTime dateActivation { get; set; }
         public int forfait { get; set; }
