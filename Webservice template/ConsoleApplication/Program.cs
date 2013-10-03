@@ -48,7 +48,7 @@
                                 </Customer>";
 
             CRMService.CRMSyncServiceSoapClient client = new CRMService.CRMSyncServiceSoapClient();
-            //client.UpdateCustomer(customerXML);
+            client.UpdateCustomer(customerXML);
             client.UpdateContact(contactXML);
         }
     }
