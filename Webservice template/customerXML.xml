@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Customer NoDuClient="Int">
+  <NomDuCompte>FieldValue</NomDuCompte>
+  <Telephone>FieldValue</Telephone>
+  <Adresse1>FieldValue</Adresse1>
+  <Adresse2>FieldValue</Adresse2>
+  <Ville>FieldValue</Ville>
+  <Province>FieldValue</Province>
+  <Pays>FieldValue</Pays>
+  <CodePostal>FieldValue</CodePostal>
+  <DateDeEssai>FieldValue</DateDeEssai>
+  <NombreDeLogin>FieldValue</NombreDeLogin>
+  <ImportationCompletee>FieldValue</ImportationCompletee>
+  <DateImportation>FieldValue</DateImportation>
+  <GabaritCree>FieldValue</GabaritCree>
+  <DateGabarit>FieldValue</DateGabarit>
+  <EnvoiComplete>FieldValue</EnvoiComplete>
+  <DateEnvoi>FieldValue</DateEnvoi>
+  <DateActivation>FieldValue</DateActivation>
+  <Forfait>FieldValue</Forfait>
+  <OSBL>FieldValue</OSBL>
+  <Premium>FieldValue</Premium>
+  <Actif>FieldValue</Actif>
+  <EnvoiPermis>FieldValue</EnvoiPermis>
+  <Revendeur>FieldValue</Revendeur>
+  <NoDeRevendeur>FieldValue</NoDeRevendeur>
+  <RevenuForfait>FieldValue</RevenuForfait>
+  <RevenuExtra>FieldValue</RevenuExtra>
+  <CourrielFrom>FieldValue</CourrielFrom>
+  <ExpirationDemo>FieldValue</ExpirationDemo>
+  <BDSupprimee>FieldValue</BDSupprimee>
+  <AccesAPI>FieldValue</AccesAPI>
+  <AccesAPISansOptIn>FieldValue</AccesAPISansOptIn>
+  <EntrepriseFacturation>FieldValue</EntrepriseFacturation>
+  <MéthodeDePaiement>FieldValue</MéthodeDePaiement>
+</Customer>

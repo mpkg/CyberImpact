@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contact NoDuClient="Int" Nom="`String" Prenom="String">
+  <ContactTechnique>FieldValue</ContactTechnique>
+  <ContactFacturation>FieldValue</ContactFacturation>
+  <CyberBulletin>FieldValue</CyberBulletin>
+  <Langue>FieldValue</Langue>
+  <Ville>FieldValue</Ville>
+  <Actif>FieldValue</Actif>
+</Contact>

@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="CRMSyncService.asmx.cs" Class="CyberImpact.Crm.WebServices.CRMSyncService" %>

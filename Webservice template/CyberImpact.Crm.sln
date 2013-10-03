@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberImpact.Crm.WebServices", "CyberImpact.Crm.WebServices\CyberImpact.Crm.WebServices.csproj", "{4690C143-0A35-467C-8D73-263987908943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberImpact.Crm.Operations", "CyberImpact.Crm.Operations\CyberImpact.Crm.Operations.csproj", "{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4690C143-0A35-467C-8D73-263987908943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4690C143-0A35-467C-8D73-263987908943}.Release|x86.ActiveCfg = Release|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{27DFE2CA-EAFF-47FF-AA69-F0596E981A13}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
