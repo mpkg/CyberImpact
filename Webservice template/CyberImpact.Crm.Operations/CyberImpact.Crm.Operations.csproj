@@ -40,10 +40,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="microsoft.crm.sdk.proxy">
-      <HintPath>..\..\..\..\..\sdk2011_Jan2013\sdk\bin\microsoft.crm.sdk.proxy.dll</HintPath>
+      <HintPath>D:\Office\IOTAP\CRM\SDK 5.0.9\sdk\bin\microsoft.crm.sdk.proxy.dll</HintPath>
     </Reference>
     <Reference Include="microsoft.xrm.sdk">
-      <HintPath>..\..\..\..\..\sdk2011_Jan2013\sdk\bin\microsoft.xrm.sdk.dll</HintPath>
+      <HintPath>D:\Office\IOTAP\CRM\SDK 5.0.9\sdk\bin\microsoft.xrm.sdk.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

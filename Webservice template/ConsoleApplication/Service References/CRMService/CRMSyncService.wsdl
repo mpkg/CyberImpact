@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://cyberimpact.ca" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://cyberimpact.ca" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://cyberimpact.ca">
+      <s:element name="UpdateCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCustomerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="contactXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateContactResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateContactSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateContact" />
+  </wsdl:message>
+  <wsdl:message name="UpdateContactSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateContactResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CRMSyncServiceSoap">
+    <wsdl:operation name="UpdateCustomer">
+      <wsdl:input message="tns:UpdateCustomerSoapIn" />
+      <wsdl:output message="tns:UpdateCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContact">
+      <wsdl:input message="tns:UpdateContactSoapIn" />
+      <wsdl:output message="tns:UpdateContactSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CRMSyncServiceSoap" type="tns:CRMSyncServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateCustomer">
+      <soap:operation soapAction="http://cyberimpact.ca/UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContact">
+      <soap:operation soapAction="http://cyberimpact.ca/UpdateContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CRMSyncServiceSoap12" type="tns:CRMSyncServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateCustomer">
+      <soap12:operation soapAction="http://cyberimpact.ca/UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContact">
+      <soap12:operation soapAction="http://cyberimpact.ca/UpdateContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CRMSyncService">
+    <wsdl:port name="CRMSyncServiceSoap" binding="tns:CRMSyncServiceSoap">
+      <soap:address location="http://localhost:20867/CRMSyncService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CRMSyncServiceSoap12" binding="tns:CRMSyncServiceSoap12">
+      <soap12:address location="http://localhost:20867/CRMSyncService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

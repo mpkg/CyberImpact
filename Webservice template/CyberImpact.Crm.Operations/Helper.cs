@@ -120,55 +120,5 @@ namespace CyberImpact.Crm.Operations
                 return (IOrganizationService)_serviceProxy;
             }
         }
-    }
-
-    public class Customer
-    {
-        public DateTime dateGabarit { get; set; }
-        public int noDuClient { get; set; }
-        public string nomDuCompte { get; set; }
-        public string telephone { get; set; }
-        public string adresse1 { get; set; }
-        public string adresse2 { get; set; }
-        public string ville { get; set; }
-        public string province { get; set; }
-        public string pays { get; set; }
-        public string codePostal { get; set; }
-        public DateTime dateDeEssai { get; set; }
-        public int nombreDeLogin { get; set; }
-        public bool importationCompletee { get; set; }
-        public DateTime dateImportation { get; set; }
-        public bool gabaritCree { get; set; }
-        public bool envoiComplete { get; set; }
-        public DateTime dateEnvoi { get; set; }
-        public DateTime dateActivation { get; set; }
-        public int forfait { get; set; }
-        public bool osbl { get; set; }
-        public bool premium { get; set; }
-        public bool actif { get; set; }
-        public bool envoiPermis { get; set; }
-        public bool revendeur { get; set; }
-        public string noDeRevendeur { get; set; }
-        public Money revenuForfait { get; set; }
-        public Money revenuExtra { get; set; }
-        public string courrielFrom { get; set; }
-        public DateTime expirationDemo { get; set; }
-        public bool bDSupprimee { get; set; }
-        public bool accesAPI { get; set; }
-        public bool accesAPISansOptIn { get; set; }
-        public string entrepriseFacturation { get; set; }
-        public int methodeDePaiement { get; set; }
-    }
-
-    public class Contact
-    {
-        public int noDuClient { get; set; }
-        public string nom { get; set; }
-        public string prenom { get; set; }
-        public bool contactTechnique { get; set; }
-        public bool contactFacturation { get; set; }
-        public bool cyberBulletin { get; set; }
-        public int langue { get; set; }
-        public bool actif { get; set; }
-    }
+    }    
 }
