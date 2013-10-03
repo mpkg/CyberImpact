@@ -1,9 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Contact NoDuClient="Int" Nom="`String" Prenom="String">
-  <ContactTechnique>FieldValue</ContactTechnique>
-  <ContactFacturation>FieldValue</ContactFacturation>
-  <CyberBulletin>FieldValue</CyberBulletin>
-  <Langue>FieldValue</Langue>
-  <Ville>FieldValue</Ville>
-  <Actif>FieldValue</Actif>
-</Contact>
+﻿<Contact NoDuClient='50' Nom='ab v vvc' Prenom='pqr'>
+                                    <ContactTechnique>true</ContactTechnique>
+                                    <ContactFacturation>false</ContactFacturation>
+                                    <Langue>100000000</Langue>
+                                    <Actif>true</Actif>
+                                </Contact>
