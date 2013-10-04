@@ -54,7 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
+    <Compile Include="Constants\AccountInfo.cs" />
+    <Compile Include="Constants\ForfaitHistoriqueInfo.cs" />
+    <Compile Include="Constants\PluginInfo.cs" />
+    <Compile Include="Constants\RevenuHistorique.cs" />
+    <Compile Include="Plugins\AccountValidations.cs" />
+    <Compile Include="Plugins\AccountHistory.cs" />
+    <Compile Include="Plugins\EntitySetname.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
