@@ -18,19 +18,19 @@ namespace CyberImpact.Plugin.Account
 
                 try
                 {
-                    if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
+                    if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Microsoft.Xrm.Sdk.Entity)
                     {
                         #region Account Validations: Acct Pre Create/Pre Update (1)
 
                         if ((context.MessageName == Constants.PluginInfo.MessageCreate || context.MessageName == Constants.PluginInfo.MessageUpdate) && context.Stage == (int)Constants.PluginInfo.StageValues.PreValidation)
                         {
-                            Entity targetEntity = context.InputParameters["Target"] as Entity;
+                            Microsoft.Xrm.Sdk.Entity targetEntity = context.InputParameters["Target"] as Microsoft.Xrm.Sdk.Entity;
 
-                            Entity preImage = null;
+                            Microsoft.Xrm.Sdk.Entity preImage = null;
 
                             if (context.MessageName == Constants.PluginInfo.MessageUpdate && context.PreEntityImages.Contains("PreImage"))
                             {
-                                preImage = context.PreEntityImages["PreImage"] as Entity;
+                                preImage = context.PreEntityImages["PreImage"] as Microsoft.Xrm.Sdk.Entity;
                             }
 
                             #region if new_Importationcompletee = true, then new_dateImportation must be completed

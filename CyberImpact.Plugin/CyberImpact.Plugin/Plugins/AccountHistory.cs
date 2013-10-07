@@ -18,26 +18,26 @@ namespace CyberImpact.Plugin.Account
 
                 try
                 {
-                    if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Entity)
+                    if (context.InputParameters.Contains("Target") && context.InputParameters["Target"] is Microsoft.Xrm.Sdk.Entity)
                     {
                         #region Account History: Acct Post Create/Pre Update (1)
 
                         if ((context.MessageName == Constants.PluginInfo.MessageCreate || context.MessageName == Constants.PluginInfo.MessageUpdate) && context.Stage == (int)Constants.PluginInfo.StageValues.PostOperation)
                         {
-                            Entity targetEntity = context.InputParameters["Target"] as Entity;
+                            Microsoft.Xrm.Sdk.Entity targetEntity = context.InputParameters["Target"] as Microsoft.Xrm.Sdk.Entity;
 
-                            Entity postImage = null;
+                            Microsoft.Xrm.Sdk.Entity postImage = null;
 
                             if (context.MessageName == Constants.PluginInfo.MessageUpdate && context.PostEntityImages.Contains("PostImage"))
                             {
-                                postImage = context.PostEntityImages["PostImage"] as Entity;
+                                postImage = context.PostEntityImages["PostImage"] as Microsoft.Xrm.Sdk.Entity;
                             }
 
                             #region If new_forfait, new_comptepremium or new_osbl changes, create a new record in the new_forfaithistorique
 
                             if (targetEntity.Contains(Constants.AccountInfo.Forfait) || targetEntity.Contains(Constants.AccountInfo.Compte_premium) || targetEntity.Contains(Constants.AccountInfo.OSBL))
                             {
-                                Entity forfaithistorique = new Entity(Constants.ForfaitHistoriqueInfo.EntityName);
+                                Microsoft.Xrm.Sdk.Entity forfaithistorique = new Microsoft.Xrm.Sdk.Entity(Constants.ForfaitHistoriqueInfo.EntityName);
                                 forfaithistorique[Constants.ForfaitHistoriqueInfo.Date_d_activation] = DateTime.Now;
                                 forfaithistorique[Constants.ForfaitHistoriqueInfo.Compte] = new EntityReference(Constants.AccountInfo.EntityName, targetEntity.Id);
 
@@ -62,7 +62,7 @@ namespace CyberImpact.Plugin.Account
 
                             if (targetEntity.Contains(Constants.AccountInfo.Revenu_Forfait) || targetEntity.Contains(Constants.AccountInfo.Revenu_Extra))
                             {
-                                Entity revenuhistorique = new Entity(Constants.RevenuHistoriqueInfo.EntityName);
+                                Microsoft.Xrm.Sdk.Entity revenuhistorique = new Microsoft.Xrm.Sdk.Entity(Constants.RevenuHistoriqueInfo.EntityName);
                                 revenuhistorique[Constants.RevenuHistoriqueInfo.Date_du_Revenu] = DateTime.Now;
                                 revenuhistorique[Constants.RevenuHistoriqueInfo.Compte] = new EntityReference(Constants.AccountInfo.EntityName, targetEntity.Id);
 
