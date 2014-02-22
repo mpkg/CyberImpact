@@ -121,5 +121,37 @@ namespace CalculateActuals
                 return (IOrganizationService)_serviceProxy;
             }
         }
+
+        /// <summary>
+        /// Call this method for bulk update
+        /// </summary>
+        /// <param name="service">Org Service</param>
+        /// <param name="entities">Collection of entities to Update</param>
+        public static void BulkUpdate(IOrganizationService service, List<Entity> entities)
+        {
+            // Create an ExecuteMultipleRequest object.
+            var multipleRequest = new ExecuteMultipleRequest()
+            {
+                // Assign settings that define execution behavior: continue on error, return responses. 
+                Settings = new ExecuteMultipleSettings()
+                {
+                    ContinueOnError = false,
+                    ReturnResponses = true
+                },
+                // Create an empty organization request collection.
+                Requests = new OrganizationRequestCollection()
+            };
+
+            // Add a UpdateRequest for each entity to the request collection.
+            foreach (var entity in entities)
+            {
+                UpdateRequest updateRequest = new UpdateRequest { Target = entity };
+                multipleRequest.Requests.Add(updateRequest);
+            }
+
+            // Execute all the requests in the request collection using a single web method call.
+            ExecuteMultipleResponse multipleResponse = (ExecuteMultipleResponse)service.Execute(multipleRequest);
+
+        }
     }
 }
