@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.Xrm.Sdk;
-
 using Microsoft.Xrm.Sdk.Query;
 using System.Collections.Generic;
 
@@ -31,7 +30,7 @@ namespace CalculateActuals
             
             try
             {
-                Console.WriteLine("Calculating Budget Actuals...");
+                Console.WriteLine("Creating organization service object...");
 
                 IOrganizationService organizationService = Helper.GetCrmConnection();
 
@@ -47,8 +46,7 @@ namespace CalculateActuals
                     {
                         Conditions =
                     {
-                        new ConditionExpression("statecode", ConditionOperator.Equal, 0),
-                        new ConditionExpression("createdon", ConditionOperator.Today)
+                        new ConditionExpression("statecode", ConditionOperator.Equal, 0)
                     }
                     }
                 };
@@ -65,13 +63,15 @@ namespace CalculateActuals
                 {
                     try
                     {
-                        objectif = budgetRecords.Entities[i].GetAttributeValue<Money>("new_objectif").Value;
                         vendeur = budgetRecords.Entities[i].GetAttributeValue<EntityReference>("new_vendeur");
                         typedetravaux = budgetRecords.Entities[i].GetAttributeValue<EntityReference>("new_typedetravaux");
                         fiscalperiod = budgetRecords.Entities[i].GetAttributeValue<OptionSetValue>("new_periodefiscale").Value;
                         exercice = budgetRecords.Entities[i].GetAttributeValue<OptionSetValue>("new_excercice").Value;
 
-                        Console.WriteLine("\nBudget record - " + vendeur.Name + "/" + typedetravaux.Name + "/" + fiscalperiod.ToString() + "/" + exercice.ToString());
+                        if (budgetRecords.Entities[i].GetAttributeValue<Money>("new_objectif") != null)
+                            objectif = budgetRecords.Entities[i].GetAttributeValue<Money>("new_objectif").Value;
+
+                        Console.WriteLine("\nBudget record #" + i + " - " + vendeur.Name + "/" + typedetravaux.Name + "/" + (fiscalperiod % 100).ToString() + "/" + exercice.ToString());
 
                         #region Reel AC Calculation
 
@@ -85,7 +85,7 @@ namespace CalculateActuals
                                 {
                                     new ConditionExpression("new_vendeur1", ConditionOperator.Equal, vendeur.Id),
                                     new ConditionExpression("new_typedetravaux1", ConditionOperator.Equal, typedetravaux.Id),
-                                    new ConditionExpression("new_datecontrat", ConditionOperator.InFiscalPeriod, fiscalperiod-100),
+                                    new ConditionExpression("new_datecontrat", ConditionOperator.InFiscalPeriod, fiscalperiod % 100),
                                     new ConditionExpression("new_datecontrat", ConditionOperator.InFiscalYear, exercice)
                                 }
                             }
@@ -97,7 +97,10 @@ namespace CalculateActuals
                         reelAC = decimal.Zero;
                         for (int j = 0; j < contractRecordsAC.Entities.Count; j++)
                         {
-                            reelAC += contractRecordsAC.Entities[j].GetAttributeValue<Money>("new_ventetotal").Value;
+                            if (contractRecordsAC.Entities[j].GetAttributeValue<Money>("new_ventetotal") != null)
+                            {
+                                reelAC += contractRecordsAC.Entities[j].GetAttributeValue<Money>("new_ventetotal").Value;
+                            }
                         }
                         budgetRecords.Entities[i]["new_reelac"] = new Money(reelAC);
                         #endregion Reel AC Calculation
@@ -114,7 +117,7 @@ namespace CalculateActuals
                                 {
                                      new ConditionExpression("new_vendeur1", ConditionOperator.Equal, vendeur.Id),
                                      new ConditionExpression("new_typedetravaux1", ConditionOperator.Equal, typedetravaux.Id),
-                                     new ConditionExpression("new_datecontrat", ConditionOperator.InFiscalPeriod, fiscalperiod-100),
+                                     new ConditionExpression("new_datecontrat", ConditionOperator.InFiscalPeriod, fiscalperiod % 100),
                                      new ConditionExpression("new_datecontrat", ConditionOperator.InFiscalYear, exercice-1)
                                 }
                             }
@@ -126,7 +129,10 @@ namespace CalculateActuals
                         reelAP = decimal.Zero;
                         for (int j = 0; j < contractRecordsAP.Entities.Count; j++)
                         {
-                            reelAP += contractRecordsAP.Entities[j].GetAttributeValue<Money>("new_ventetotal").Value;
+                            if (contractRecordsAP.Entities[j].GetAttributeValue<Money>("new_ventetotal") != null)
+                            {
+                                reelAP += contractRecordsAP.Entities[j].GetAttributeValue<Money>("new_ventetotal").Value;
+                            }
                         }
 
                         budgetRecords.Entities[i]["new_reelap"] = new Money(reelAP);
@@ -159,7 +165,7 @@ namespace CalculateActuals
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("For loop - " + ex.Message);
+                        Console.WriteLine("Exception in Budget for loop - " + ex.Message);
                     }
                 }
 
@@ -169,7 +175,7 @@ namespace CalculateActuals
 
                 Helper.BulkUpdate(organizationService, budgetRecordsToUpdate);
 
-                Console.WriteLine("\nProcess complete!");
+                Console.WriteLine("\nBudget records updated...Press any key to exit!");
             }
             catch (Exception e)
             {
