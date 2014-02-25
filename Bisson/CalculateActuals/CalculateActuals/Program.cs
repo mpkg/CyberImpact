@@ -175,13 +175,12 @@ namespace CalculateActuals
 
                 Helper.BulkUpdate(organizationService, budgetRecordsToUpdate);
 
-                Console.WriteLine("\nBudget records updated...Press any key to exit!");
+                Console.WriteLine("\nBudget records updated!");
             }
             catch (Exception e)
             {
                 Console.WriteLine("Main - " + e.Message);
-            }
-            Console.Read();
+            }            
         }
     }
 }
