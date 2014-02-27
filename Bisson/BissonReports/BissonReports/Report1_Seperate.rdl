@@ -1026,7 +1026,7 @@
             <Value>=Parameters!FiscalYear_4.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>&lt;fetch version="1.0" count="5000" output-format="xml-platform" mapping="logical" distinct="false"&gt;
+        <CommandText>&lt;fetch version="1.0" count="50000" output-format="xml-platform" mapping="logical" distinct="false"&gt;
   &lt;entity name="opportunity"&gt;    
     &lt;attribute name="opportunityid" /&gt;
     &lt;attribute name="new_dateproposition" /&gt;
@@ -1090,7 +1090,7 @@
             <Value>=Parameters!FiscalYear_4.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>&lt;fetch version="1.0" count="5000" output-format="xml-platform" mapping="logical" distinct="true"&gt;
+        <CommandText>&lt;fetch version="1.0" count="50000" output-format="xml-platform" mapping="logical" distinct="true"&gt;
   &lt;entity name="new_contrat"&gt;
     &lt;attribute name="new_datecontrat" /&gt;
     &lt;attribute name="new_contratid" /&gt;    
@@ -1151,7 +1151,7 @@
             <Value>=Parameters!FiscalYear_3.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>&lt;fetch version="1.0" count="5000" output-format="xml-platform" mapping="logical" distinct="true"&gt;
+        <CommandText>&lt;fetch version="1.0" count="50000" output-format="xml-platform" mapping="logical" distinct="true"&gt;
   &lt;entity name="lead"&gt;
     &lt;attribute name="new_dateappelrecu" /&gt;
     &lt;attribute name="leadid" /&gt;
