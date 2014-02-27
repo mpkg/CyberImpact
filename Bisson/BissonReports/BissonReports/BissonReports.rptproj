@@ -5,8 +5,12 @@
   <DataSets />
   <Reports>
     <ProjectItem>
-      <Name>Report1.rdl</Name>
-      <FullPath>Report1.rdl</FullPath>
+      <Name>Report1_Seperate.rdl</Name>
+      <FullPath>Report1_Seperate.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Report1_One Page.rdl</Name>
+      <FullPath>Report1_One Page.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

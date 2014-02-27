@@ -93,6 +93,7 @@
                     <FontSize>8pt</FontSize>
                   </Style>
                 </ChartAxisTitle>
+                <Interval>1</Interval>
                 <ChartMajorGridLines>
                   <Enabled>False</Enabled>
                   <Style>
@@ -288,8 +289,9 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>Propositions</DataSetName>
-        <Height>2.8in</Height>
-        <Width>11in</Width>
+        <Left>0.01371in</Left>
+        <Height>6in</Height>
+        <Width>10in</Width>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -388,6 +390,7 @@
                     <FontSize>8pt</FontSize>
                   </Style>
                 </ChartAxisTitle>
+                <Interval>1</Interval>
                 <ChartMajorGridLines>
                   <Enabled>False</Enabled>
                   <Style>
@@ -464,6 +467,7 @@
                   </Style>
                 </ChartAxisTitle>
                 <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
                   <Style>
                     <Border>
                       <Color>Gainsboro</Color>
@@ -579,9 +583,10 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>Contracts</DataSetName>
-        <Top>2.86944in</Top>
-        <Height>2.8in</Height>
-        <Width>11in</Width>
+        <Top>6.31944in</Top>
+        <Left>0.01371in</Left>
+        <Height>6in</Height>
+        <Width>10in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -681,6 +686,7 @@
                     <FontSize>8pt</FontSize>
                   </Style>
                 </ChartAxisTitle>
+                <Interval>1</Interval>
                 <ChartMajorGridLines>
                   <Enabled>False</Enabled>
                   <Style>
@@ -757,6 +763,7 @@
                   </Style>
                 </ChartAxisTitle>
                 <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
                   <Style>
                     <Border>
                       <Color>Gainsboro</Color>
@@ -871,9 +878,9 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>Leads</DataSetName>
-        <Top>5.73889in</Top>
-        <Height>2.8in</Height>
-        <Width>11in</Width>
+        <Top>12.76389in</Top>
+        <Height>6in</Height>
+        <Width>10in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -885,13 +892,13 @@
         </Style>
       </Chart>
     </ReportItems>
-    <Height>8.53889in</Height>
+    <Height>19in</Height>
     <Style />
   </Body>
-  <Width>11in</Width>
+  <Width>10.01371in</Width>
   <Page>
     <PageHeader>
-      <Height>1in</Height>
+      <Height>0.5in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -899,42 +906,6 @@
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>Calibri</FontFamily>
-                    <FontSize>11pt</FontSize>
-                    <FontWeight>Normal</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                    <Color>#000000</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontStyle>Normal</FontStyle>
-                    <FontFamily>Calibri</FontFamily>
-                    <FontSize>11pt</FontSize>
-                    <FontWeight>Normal</FontWeight>
-                    <TextDecoration>None</TextDecoration>
-                    <Color>#000000</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
             <Paragraph>
               <TextRuns>
                 <TextRun>
@@ -956,8 +927,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox37</rd:DefaultName>
-          <Height>0.94444in</Height>
-          <Width>11in</Width>
+          <Height>0.5in</Height>
+          <Width>10in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -976,7 +947,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1in</Height>
+      <Height>0.55556in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -995,9 +966,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox38</rd:DefaultName>
-          <Top>0.01389in</Top>
-          <Height>0.98611in</Height>
-          <Width>11in</Width>
+          <Top>0.05556in</Top>
+          <Height>0.5in</Height>
+          <Width>10in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1017,10 +988,10 @@
     </PageFooter>
     <PageHeight>8.5in</PageHeight>
     <PageWidth>11in</PageWidth>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
