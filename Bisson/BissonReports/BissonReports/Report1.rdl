@@ -1164,6 +1164,9 @@
           <QueryParameter Name="@FiscalYear_3">
             <Value>=Parameters!FiscalYear_3.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@FiscalYear_4">
+            <Value>=Parameters!FiscalYear_4.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>&lt;fetch version="1.0" count="50000" output-format="xml-platform" mapping="logical" distinct="true"&gt;
   &lt;entity name="lead"&gt;
@@ -1177,6 +1180,7 @@
           &lt;condition attribute="new_dateappelrecu" operator="in-fiscal-year" value="@FiscalYear_1" /&gt;
 		  &lt;condition attribute="new_dateappelrecu" operator="in-fiscal-year" value="@FiscalYear_2" /&gt;
 		  &lt;condition attribute="new_dateappelrecu" operator="in-fiscal-year" value="@FiscalYear_3" /&gt;
+&lt;condition attribute="new_dateappelrecu" operator="in-fiscal-year" value="@FiscalYear_4" /&gt;
         &lt;/filter&gt;
       &lt;/filter&gt;
     &lt;/filter&gt;
@@ -1308,6 +1312,7 @@
       <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
+  <Language>fr-FR</Language>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>c2234a7d-46f5-4a08-9095-f0bdca1a5170</rd:ReportID>
 </Report>
